@@ -1,6 +1,4 @@
 # src/utils/scaler.py
-# src/utils/scaler.py
-# src/utils/scaler.py
 
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
@@ -99,51 +97,3 @@ def validate_features(df, expected_features):
         print("✅ All features present")
 
 
-
-
-
-
-
-
-
-
-# from sklearn.preprocessing import MinMaxScaler
-# import numpy as np
-
-
-# def scale_data(df):
-#     """
-#     Fit scaler on training data
-#     """
-#     scaler = MinMaxScaler()
-
-#     scaled = scaler.fit_transform(df.values.astype(np.float32))
-
-#     return scaled, scaler
-
-
-# def transform_data(df, scaler):
-#     """
-#     Use same scaler during prediction
-#     """
-#     return scaler.transform(df.values.astype(np.float32))
-
-
-# def inverse_transform(data, scaler):
-#     """
-#     Convert scaled data back to original (optional use)
-#     """
-#     return scaler.inverse_transform(data)
-
-
-
-
-
-
-
-# from sklearn.preprocessing import MinMaxScaler
-
-# def scale_data(df):
-#     scaler = MinMaxScaler()
-#     scaled = scaler.fit_transform(df)
-#     return scaled, scaler

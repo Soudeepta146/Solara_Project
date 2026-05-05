@@ -42,7 +42,7 @@ MODEL_DIR = os.path.join(BASE_DIR, "models")
 # ---------------------------
 print("🚀 Loading models...")
 
-model1 = load_model(os.path.join(MODEL_DIR, "lstm_v1.keras"))
+model1 = load_model(os.path.join(MODEL_DIR, "lstm_v2.keras"))
 model2 = load_model(os.path.join(MODEL_DIR, "lstm_v2.keras"))
 
 scaler = joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))

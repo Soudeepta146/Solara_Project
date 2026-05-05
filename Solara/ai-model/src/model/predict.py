@@ -1,4 +1,4 @@
-# # src/model/predict.py
+# src/model/predict.py
 
 import os
 import numpy as np
@@ -20,8 +20,9 @@ load_dotenv()
 # =========================
 # LOAD MODEL + SCALER
 # =========================
-MODEL_PATH = "models/lstm_v2.keras"
-SCALER_PATH = "models/scaler.pkl"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "lstm_v2.keras")
+SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler.pkl")
 
 model = load_model(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)

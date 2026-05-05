@@ -1,10 +1,6 @@
-# # src/utils/sequences.py
-# # src/utils/sequences.py
-
 # src/utils/sequences.py
 
 import numpy as np
-
 
 # ---------------------------
 # 🧠 TRAINING SEQUENCES
@@ -125,80 +121,3 @@ def inspect_sequences(X_seq, y_seq):
     print("🔍 Sample X:", X_seq[0][:3])
     print("🔍 Sample y:", y_seq[0][:3])
 
-
-
-
-
-
-
-
-# import numpy as np
-
-
-# def create_sequences(X, y, seq_length, pred_steps):
-#     """
-#     Create sequences for LSTM
-
-#     X: scaled features
-#     y: target (residual)
-#     """
-
-#     X = np.array(X, dtype=np.float32)
-#     y = np.array(y, dtype=np.float32)
-
-#     n_samples = len(X)
-
-#     if n_samples < seq_length + pred_steps:
-#         raise ValueError("❌ Not enough data to create sequences")
-
-#     X_seq = []
-#     y_seq = []
-
-#     for i in range(n_samples - seq_length - pred_steps + 1):
-#         X_seq.append(X[i : i + seq_length])
-#         y_seq.append(y[i + seq_length : i + seq_length + pred_steps])
-
-#     X_seq = np.array(X_seq, dtype=np.float32)
-#     y_seq = np.array(y_seq, dtype=np.float32)
-
-#     return X_seq, y_seq
-
-
-
-
-
-
-
-
-
-# import numpy as np
-
-# def create_sequences(X, y, seq_length, pred_steps):
-
-#     X_seq = []
-#     y_seq = []
-
-#     for i in range(len(X) - seq_length - pred_steps):
-#         X_seq.append(X[i : i + seq_length])
-#         y_seq.append(y[i + seq_length : i + seq_length + pred_steps])
-
-#     return np.array(X_seq), np.array(y_seq)
-
-
-
-
-
-
-
-# # src/utils/sequences.py
-
-# import numpy as np
-
-# def create_sequences(data, seq_length, pred_steps):
-#     X, y = [], []
-
-#     for i in range(len(data) - seq_length - pred_steps):
-#         X.append(data[i:i+seq_length])
-#         y.append(data[i+seq_length:i+seq_length+pred_steps, 0])
-
-#     return np.array(X), np.array(y)
