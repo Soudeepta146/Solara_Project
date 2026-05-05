@@ -29,3 +29,4 @@ node_modules/
 *.pkl
 *.h5
 __pycache__/
+*.pyc
