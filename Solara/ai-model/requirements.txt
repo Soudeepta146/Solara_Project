@@ -4,6 +4,5 @@ pydantic
 numpy
 pandas
 joblib
-tensorflow
 requests
 python-multipart
